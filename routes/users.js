@@ -13,6 +13,6 @@ router.post('/register', register); //POST request to register the user
 
 router.post('/login', login); // POST request to login the user
 
-router.get('/getusers', getusers); //GET request to see table users
+router.get('/getusers/:email', getusers); //GET request to see table users
 
 module.exports = router;
