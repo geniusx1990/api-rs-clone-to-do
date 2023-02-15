@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express(); //Initialized express
-const client = require("../src/configs/database");
+const client = require("./configs/database");
 client.connect((err) => { //Connected Database
 
     if (err) {
