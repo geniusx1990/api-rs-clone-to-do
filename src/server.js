@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express(); //Initialized express
-const client = require("../configs/database");
+const client = require("../src/configs/database");
 client.connect((err) => { //Connected Database
 
     if (err) {
@@ -68,6 +68,6 @@ app.listen(port, () => {
 
 
 
-const user = require("../routes/users");
+const user = require("./routes/users");
 
 app.use("/user", user);  //Route for /user endpoint of API
