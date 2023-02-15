@@ -4,6 +4,7 @@ const client = require("../configs/database");
 
 const jwt = require("jsonwebtoken");
 
+
 //Login Function
 exports.login = async (req, res) => {
     const { email, password } = req.body;
@@ -26,7 +27,7 @@ exports.login = async (req, res) => {
                         {
                             email: email,
                         },
-                        process.env.SECRET_KEY
+                        process.SECRET_KEY = 'any random stin here'
                     );
                     res.status(200).json({
                         message: "User signed in!",

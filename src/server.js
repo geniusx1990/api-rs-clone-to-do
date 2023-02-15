@@ -1,4 +1,5 @@
-require("../configs/dotenv");
+/* require("../configs/dotenv");
+ */
 const express = require("express");
 const cors = require("cors");
 const app = express(); //Initialized express

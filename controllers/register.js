@@ -52,7 +52,7 @@ exports.register = async (req, res) => {
                         {
                             email: user.email
                         },
-                        process.env.SECRET_KEY
+                        process.SECRET_KEY = 'any random stin here'
                     );
                 };
             });
