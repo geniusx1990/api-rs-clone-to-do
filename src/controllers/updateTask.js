@@ -2,8 +2,8 @@ const client = require("../configs/database");
 
 
 
-//add task Function            
-exports.updateTask = async (req, res) => {
+//update task Function            
+exports.updatetask = async (req, res) => {
     const { id, title, content, completed, user_id} = req.body;
     try {
         const updatedTask = await client.query(`UPDATE tasks set title = $1, content = $2, completed = $3, user_id = $4 where id = $5;`, [title, content, completed, user_id, id]) //Inserting data into tasks table
