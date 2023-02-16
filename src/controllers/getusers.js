@@ -13,6 +13,7 @@ exports.getusers = async (req, res) => {
         const userData = data.rows;
         const filterData = userData.map((user) => {
             return {
+                user_id: user.id,
                 name: user.name,
                 email: user.email,
                 contact: user.phonenumber
