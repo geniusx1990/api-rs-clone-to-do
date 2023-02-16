@@ -12,7 +12,7 @@ const { addtask } = require("../controllers/addtask");
 
 const { gettasks } = require('../controllers/gettasks');
 
-const { updateTask } = require('../controllers/updatetask');
+const { updateTask } = require('../controllers/updateTask');
 
 
 router.post('/register', register); //POST request to register the user
