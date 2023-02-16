@@ -23,15 +23,9 @@ exports.login = async (req, res) => {
                         error: "Server error",
                     });
                 } else if (result === true) { //Checking if credentials match
-                    const token = jwt.sign(
-                        {
-                            email: email,
-                        },
-                        process.SECRET_KEY = 'any random stin here'
-                    );
                     res.status(200).json({
                         message: "User signed in!",
-                        token: token,
+                        user_id: user[0].id
                     });
                 }
                 else {

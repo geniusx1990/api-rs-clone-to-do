@@ -12,6 +12,8 @@ const { addtask } = require("../controllers/addtask");
 
 const { gettasks } = require('../controllers/gettasks');
 
+const { updateTask } = require('../controllers/updatetask');
+
 
 router.post('/register', register); //POST request to register the user
 
@@ -22,5 +24,8 @@ router.get('/getusers/:email', getusers); //GET request to see table users
 router.post('/addtask', addtask); // POST request to add task for user
 
 router.get('/gettasks', gettasks); // GET request to get tasks for user
+
+router.post('/update-task', updateTask); // POST request to get update task
+
 
 module.exports = router;

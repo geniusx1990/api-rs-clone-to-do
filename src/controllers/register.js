@@ -28,7 +28,6 @@ exports.register = async (req, res) => {
                     phonenumber,
                     password: hash,
                 };
-                var flag = 1; //Declaring a flag
 
                 //Inserting data into the database
 
@@ -36,25 +35,15 @@ exports.register = async (req, res) => {
                     .query(`INSERT INTO users (name, email, phonenumber, password) VALUES ($1,$2,$3,$4);`, [user.name, user.email, user.phonenumber, user.password], (err) => {
 
                         if (err) {
-                            flag = 0; //If user is not inserted is not inserted to database assigning flag as 0/false.
                             console.error(err);
                             return res.status(500).json({
                                 error: "Database error"
                             })
                         }
                         else {
-                            flag = 1;
                             res.status(200).send({ message: 'User added to database, not verified' });
                         }
                     })
-                if (flag) {
-                    const token = jwt.sign( //Signing a jwt token
-                        {
-                            email: user.email
-                        },
-                        process.SECRET_KEY = 'any random stin here'
-                    );
-                };
             });
         }
     }

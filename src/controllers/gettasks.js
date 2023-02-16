@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken");
 exports.gettasks = async (req, res) => {
     const user_id = req.query.user_id;
     try {
-        const tasks = await client.query(`SELECT * FROM tasks WHERE user_id = $1;`, [user_id])
+        const tasks = await client.query(`SELECT * FROM tasks WHERE user_id = $1 ORDER BY id ASC;`, [user_id])
         res.json(tasks.rows);
         
 
