@@ -12,8 +12,8 @@ const { addtask } = require("../controllers/addtask");
 
 const { gettasks } = require("../controllers/gettasks");
 
-const { updatetask } = require("../controllers/updatetask")
-
+/* const { updatetask } = require("../controllers/updatetask")
+ */
 
 router.post('/register', register); //POST request to register the user
 
