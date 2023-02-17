@@ -2,8 +2,6 @@ const bcrypt = require("bcrypt");
 
 const client = require("../configs/database");
 
-const jwt = require("jsonwebtoken");
-
 //Registration Function
 
 exports.register = async (req, res) => {

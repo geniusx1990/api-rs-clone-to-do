@@ -1,8 +1,5 @@
-const bcrypt = require("bcrypt");
-
 const client = require("../configs/database");
 
-const jwt = require("jsonwebtoken");
 
 //add task Function            
 exports.addtask = async (req, res) => {

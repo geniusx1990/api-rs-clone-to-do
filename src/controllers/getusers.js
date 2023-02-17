@@ -1,8 +1,4 @@
-const bcrypt = require("bcrypt");
-
 const client = require("../configs/database");
-
-const jwt = require("jsonwebtoken");
 
 //Get Users Function
 

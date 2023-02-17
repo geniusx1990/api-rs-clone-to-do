@@ -2,9 +2,6 @@ const bcrypt = require("bcrypt");
 
 const client = require("../configs/database");
 
-const jwt = require("jsonwebtoken");
-
-
 //Login Function
 exports.login = async (req, res) => {
     const { email, password } = req.body;
