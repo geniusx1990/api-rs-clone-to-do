@@ -1,4 +1,4 @@
-const client = require("../configs/database");
+/* const client = require("../configs/database");
 
 //update task Function            
 exports.updatetask = async (req, res) => {
@@ -15,3 +15,4 @@ exports.updatetask = async (req, res) => {
         });
     };
 };
+ */

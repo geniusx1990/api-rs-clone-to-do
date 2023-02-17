@@ -25,7 +25,7 @@ router.post('/addtask', addtask); // POST request to add task for user
 
 router.get('/gettasks', gettasks); // GET request to get tasks for user
 
-router.put('/updatetask', updatetask); // PUT request to get update task
-
+/* router.put('/updatetask', updatetask); // PUT request to get update task
+ */
 
 module.exports = router;
