@@ -1,4 +1,4 @@
-const client = require("../configs/database");
+//const client = require("../configs/database");
 
 //update task Function            
 /* exports.updatetask = async (req, res) => {
@@ -17,7 +17,7 @@ const client = require("../configs/database");
 }; */
 
 
-exports.updatetask = async (req, res) => {
+/* exports.updatetask = async (req, res) => {
     const { id, completed } = req.body;
     try {
         const updatedTask = await client.query(`UPDATE tasks set completed = $1 where id = $2 RETURNING *`, [completed, id]) //Updating data into tasks table
@@ -32,3 +32,4 @@ exports.updatetask = async (req, res) => {
     };
 };
 
+ */
