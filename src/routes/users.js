@@ -18,6 +18,10 @@ const { deletetask } = require("../controllers/deletetask")
 
 const { completed } = require("../controllers/completed")
 
+const { addpost } = require("../controllers/addpost");
+
+const { getposts } = require("../controllers/getposts");
+
 
 router.post('/register', register); //POST request to register the user
 
@@ -34,5 +38,9 @@ router.get('/gettasks', gettasks); // GET request to get tasks for user
 router.delete('/deletetask/:id', deletetask); // DELETE request to delete task
 
 router.put('/completed', completed); // PUT request to COMPLETE task
+
+router.post('/addpost', addpost); // POST request to add post for task
+
+router.get('/getposts', getposts); // GET request to get posts for user
 
 module.exports = router;
