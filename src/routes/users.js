@@ -22,6 +22,8 @@ const { addpost } = require("../controllers/addpost");
 
 const { getposts } = require("../controllers/getposts");
 
+const { prioritychange } = require("../controllers/prioritychange")
+
 
 router.post('/register', register); //POST request to register the user
 
@@ -42,5 +44,8 @@ router.put('/completed', completed); // PUT request to COMPLETE task
 router.post('/addpost', addpost); // POST request to add post for task
 
 router.get('/getposts', getposts); // GET request to get posts for user
+
+router.put('/prioritychange', prioritychange); // PUT request to COMPLETE task
+
 
 module.exports = router;

@@ -26,6 +26,7 @@ client.connect((err) => { //Connected Database
             "id" SERIAL PRIMARY KEY,
             "title" text NOT NULL,
             "content" text NOT NULL,
+            "priority" text NOT NULL,
             "completed" text NOT NULL,
             "user_id" INTEGER, 
             FOREIGN KEY (user_id) REFERENCES users (id)
